@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediScan - Sign Up</title>
+    <link rel="stylesheet" href="auth-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Left side - Gradient Background -->
+        <div class="auth-left">
+            <div class="auth-logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>MediScan</h1>
+            </div>
+        </div>
+
+        <!-- Right side - Sign Up Form -->
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <!-- Celebration Icon -->
+                <div class="celebration-icon">
+                    👋
+                </div>
+
+                <!-- Welcome Text -->
+                <h2 class="auth-title">Create Account</h2>
+                <p class="auth-subtitle">Sign up to get started with MediScan</p>
+
+                <!-- Sign Up Form -->
+                <form id="signupForm" class="auth-form">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Full Name
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            placeholder="John Doe"
+                            required
+                        >
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="your@email.com"
+                            required
+                        >
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i> Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="Create a password"
+                                required
+                                minlength="6"
+                            >
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <small style="color: #718096; font-size: 0.85rem;">Password must be at least 6 characters</small>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            <i class="fas fa-lock"></i> Confirm Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                placeholder="Confirm your password"
+                                required
+                                minlength="6"
+                            >
+                            <button type="button" class="toggle-password" id="toggleConfirmPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="termsAccepted" required>
+                            <span>I agree to the <a href="#" style="color: #667eea;">Terms & Conditions</a></span>
+                        </label>
+                    </div>
+
+                    <!-- Sign Up Button -->
+                    <button type="submit" class="btn-login" id="signupBtn">
+                        <span class="btn-text">Sign Up</span>
+                        <span class="btn-loader" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Creating account...
+                        </span>
+                    </button>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="error-message" style="display: none;"></div>
+                </form>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <!-- Google Sign In -->
+                <button type="button" class="btn-google" id="googleSignUpBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.8055 10.2292C19.8055 9.55209 19.7508 8.86805 19.6348 8.19792H10.2V12.0485H15.6018C15.3773 13.2909 14.6571 14.3896 13.6025 15.0875V17.5867H16.825C18.7173 15.8447 19.8055 13.2728 19.8055 10.2292Z" fill="#4285F4"/>
+                        <path d="M10.2 20C12.9665 20 15.2722 19.1045 16.825 17.5867L13.6025 15.0875C12.7033 15.6974 11.5516 16.0429 10.2 16.0429C7.5287 16.0429 5.28546 14.2828 4.48181 11.9163H1.15625V14.4918C2.74509 17.6512 6.33713 20 10.2 20Z" fill="#34A853"/>
+                        <path d="M4.48181 11.9163C4.07376 10.6739 4.07376 9.33261 4.48181 8.09017V5.51465H1.15625C-0.385417 8.58605 -0.385417 12.4203 1.15625 15.4917L4.48181 11.9163Z" fill="#FBBC04"/>
+                        <path d="M10.2 3.95708C11.6244 3.93536 13.0008 4.47269 14.0372 5.45353L16.8978 2.60334C15.1854 0.990601 12.9301 0.109026 10.2 0.133577C6.33713 0.133577 2.74509 2.48239 1.15625 5.64175L4.48181 8.21727C5.28546 5.85077 7.5287 3.95708 10.2 3.95708Z" fill="#EA4335"/>
+                    </svg>
+                    <span>Sign up with Google</span>
+                </button>
+
+                <!-- Login Link -->
+                <p class="signup-link">
+                    Already have an account? <a href="auth.html" id="loginLink">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import Firebase config module
+        import { initializeFirebase } from './firebase-config.js';
+        
+        // Import Firebase Auth functions
+        import { 
+            createUserWithEmailAndPassword,
+            signInWithPopup, 
+            GoogleAuthProvider,
+            updateProfile
+        } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        let auth;
+
+        // Initialize Firebase
+        async function setupFirebase() {
+            try {
+                const { auth: firebaseAuth } = await initializeFirebase();
+                auth = firebaseAuth;
+                
+                // Check if user is already logged in
+                auth.onAuthStateChanged((user) => {
+                    if (user) {
+                        window.location.href = 'index.html';
+                    }
+                });
+            } catch (error) {
+                console.error('Firebase setup error:', error);
+                showError('Authentication service is not available. Please contact support.');
+                setLoading(false);
+            }
+        }
+
+        // Initialize on page load
+        setupFirebase();
+
+        const googleProvider = new GoogleAuthProvider();
+
+        // DOM Elements
+        const signupForm = document.getElementById('signupForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const termsCheckbox = document.getElementById('termsAccepted');
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        const toggleConfirmPasswordBtn = document.getElementById('toggleConfirmPassword');
+        const signupBtn = document.getElementById('signupBtn');
+        const googleSignUpBtn = document.getElementById('googleSignUpBtn');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Toggle password visibility
+        togglePasswordBtn.addEventListener('click', () => {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            togglePasswordBtn.querySelector('i').classList.toggle('fa-eye');
+            togglePasswordBtn.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+
+        toggleConfirmPasswordBtn.addEventListener('click', () => {
+            const type = confirmPasswordInput.type === 'password' ? 'text' : 'password';
+            confirmPasswordInput.type = type;
+            toggleConfirmPasswordBtn.querySelector('i').classList.toggle('fa-eye');
+            toggleConfirmPasswordBtn.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+
+        // Show error message
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            setTimeout(() => {
+                errorMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        // Show loading state
+        function setLoading(isLoading) {
+            const btnText = signupBtn.querySelector('.btn-text');
+            const btnLoader = signupBtn.querySelector('.btn-loader');
+            
+            if (isLoading) {
+                btnText.style.display = 'none';
+                btnLoader.style.display = 'inline-block';
+                signupBtn.disabled = true;
+                googleSignUpBtn.disabled = true;
+            } else {
+                btnText.style.display = 'inline-block';
+                btnLoader.style.display = 'none';
+                signupBtn.disabled = false;
+                googleSignUpBtn.disabled = false;
+            }
+        }
+
+        // Email/Password Sign Up
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            if (!name || !email || !password || !confirmPassword) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showError('Passwords do not match');
+                return;
+            }
+
+            if (password.length < 6) {
+                showError('Password must be at least 6 characters');
+                return;
+            }
+
+            if (!termsCheckbox.checked) {
+                showError('Please accept the Terms & Conditions');
+                return;
+            }
+
+            setLoading(true);
+
+            try {
+                // Create user
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+                
+                // Update profile with name
+                await updateProfile(user, {
+                    displayName: name
+                });
+                
+                console.log('User created:', user);
+                
+                // Redirect to main app
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Sign up error:', error);
+                
+                let errorMsg = 'Sign up failed. Please try again.';
+                if (error.code === 'auth/email-already-in-use') {
+                    errorMsg = 'This email is already registered.';
+                } else if (error.code === 'auth/invalid-email') {
+                    errorMsg = 'Invalid email address.';
+                } else if (error.code === 'auth/weak-password') {
+                    errorMsg = 'Password is too weak. Use at least 6 characters.';
+                }
+                
+                showError(errorMsg);
+                setLoading(false);
+            }
+        });
+
+        // Google Sign Up
+        googleSignUpBtn.addEventListener('click', async () => {
+            if (!termsCheckbox.checked) {
+                showError('Please accept the Terms & Conditions');
+                return;
+            }
+
+            setLoading(true);
+
+            try {
+                const result = await signInWithPopup(auth, googleProvider);
+                const user = result.user;
+                
+                console.log('User signed up with Google:', user);
+                
+                // Redirect to main app
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Google sign up error:', error);
+                
+                let errorMsg = 'Google sign up failed. Please try again.';
+                if (error.code === 'auth/popup-closed-by-user') {
+                    errorMsg = 'Sign up cancelled.';
+                } else if (error.code === 'auth/popup-blocked') {
+                    errorMsg = 'Pop-up was blocked. Please enable pop-ups.';
+                }
+                
+                showError(errorMsg);
+                setLoading(false);
+            }
+        });
+
+        // Check if user is already logged in
+        // (Already handled in setupFirebase)
+    </script>
+</body>
+</html>

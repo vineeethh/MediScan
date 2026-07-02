@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — MediScan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --blue: #2563eb;
+            --blue-light: #eff6ff;
+            --text: #0f172a;
+            --text-2: #475569;
+            --text-3: #94a3b8;
+            --border: #e2e8f0;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --nav-bg: #0f172a;
+            --red: #dc2626;
+            --green: #059669;
+            --grad: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            --font: 'Inter', -apple-system, sans-serif;
+            --r-lg: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,.08);
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:var(--font); background:var(--bg); color:var(--text); line-height:1.7; }
+        a { text-decoration:none; color:var(--blue); }
+        a:hover { text-decoration:underline; }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(15,23,42,.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,.06);
+            padding: .9rem 0;
+            position: sticky; top:0; z-index:100;
+        }
+        .nav-container {
+            max-width:1160px; margin:0 auto; padding:0 24px;
+            display:flex; align-items:center; gap:1.5rem;
+        }
+        .logo {
+            display:flex; align-items:center; gap:.5rem;
+            font-size:1.3rem; font-weight:800; color:#fff;
+            letter-spacing:-.02em;
+        }
+        .logo i { background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .nav-links { margin-left:auto; display:flex; gap:1.5rem; }
+        .nav-links a { color:rgba(255,255,255,.75); font-size:.875rem; font-weight:500; transition:.2s; }
+        .nav-links a:hover { color:#fff; text-decoration:none; }
+        .nav-links .btn {
+            background:var(--grad); color:#fff;
+            padding:.45rem 1.1rem; border-radius:999px;
+            font-weight:600; font-size:.85rem;
+        }
+        .nav-links .btn:hover { opacity:.9; text-decoration:none; }
+
+        /* Hero banner */
+        .page-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #3b0764 100%);
+            padding: 80px 24px 60px;
+            text-align:center;
+        }
+        .page-hero h1 { font-size:clamp(2rem,5vw,3rem); font-weight:900; color:#fff; letter-spacing:-.03em; margin-bottom:.75rem; }
+        .page-hero p { color:rgba(255,255,255,.7); font-size:1.05rem; }
+        .page-hero .badge {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2);
+            color:rgba(255,255,255,.85); padding:.35rem .9rem;
+            border-radius:999px; font-size:.78rem; font-weight:600;
+            margin-bottom:1.25rem; letter-spacing:.04em; text-transform:uppercase;
+        }
+
+        /* Layout */
+        .page-layout {
+            max-width:1040px; margin:0 auto;
+            display:grid; grid-template-columns:220px 1fr; gap:3rem;
+            padding:3rem 24px 6rem;
+        }
+        @media(max-width:768px) { .page-layout { grid-template-columns:1fr; } }
+
+        /* Sidebar TOC */
+        .toc {
+            position:sticky; top:80px; align-self:start;
+            background:var(--surface); border:1px solid var(--border);
+            border-radius:var(--r-lg); padding:1.25rem;
+        }
+        .toc h3 { font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-3); margin-bottom:.85rem; }
+        .toc ol { list-style:none; padding:0; counter-reset:toc; }
+        .toc ol li { counter-increment:toc; margin-bottom:.4rem; }
+        .toc ol li a {
+            display:flex; align-items:center; gap:.4rem;
+            font-size:.8rem; color:var(--text-2); font-weight:500;
+            padding:.25rem .4rem; border-radius:6px; transition:.2s;
+        }
+        .toc ol li a::before { content:counter(toc) "."; color:var(--text-3); font-size:.72rem; min-width:16px; }
+        .toc ol li a:hover { background:var(--blue-light); color:var(--blue); text-decoration:none; }
+
+        /* Content */
+        .content section { margin-bottom:3.5rem; }
+        .content section:first-child { margin-top:0; }
+        .content h2 {
+            font-size:1.35rem; font-weight:800; color:var(--text);
+            margin-bottom:1rem; padding-bottom:.5rem;
+            border-bottom:2px solid var(--border);
+            display:flex; align-items:center; gap:.5rem;
+        }
+        .content h2 .sec-icon { font-size:1rem; color:var(--blue); }
+        .content h3 { font-size:1rem; font-weight:700; color:var(--text); margin:1.25rem 0 .5rem; }
+        .content p { color:var(--text-2); margin-bottom:.75rem; font-size:.95rem; }
+        .content ul, .content ol { padding-left:1.4rem; color:var(--text-2); font-size:.95rem; margin-bottom:.75rem; }
+        .content li { margin-bottom:.35rem; line-height:1.65; }
+        .content strong { color:var(--text); font-weight:600; }
+        .content a { color:var(--blue); }
+
+        /* Alert boxes */
+        .alert {
+            display:flex; gap:.85rem; align-items:flex-start;
+            padding:1rem 1.15rem; border-radius:var(--r-lg);
+            margin:1.25rem 0; font-size:.9rem;
+        }
+        .alert i { font-size:1.05rem; flex-shrink:0; margin-top:.1rem; }
+        .alert-red { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; }
+        .alert-red i { color:var(--red); }
+        .alert-blue { background:var(--blue-light); border:1px solid #bfdbfe; color:#1e40af; }
+        .alert-blue i { color:var(--blue); }
+        .alert-green { background:#f0fdf4; border:1px solid #bbf7d0; color:#065f46; }
+        .alert-green i { color:var(--green); }
+        .alert div strong { display:block; margin-bottom:.2rem; }
+
+        /* Emergency numbers box */
+        .emergency-box {
+            background: linear-gradient(135deg,#fef2f2,#fff);
+            border:1.5px solid #fca5a5; border-radius:var(--r-lg);
+            padding:1.25rem 1.5rem; margin:1rem 0;
+        }
+        .emergency-box h4 { color:var(--red); font-size:.95rem; font-weight:700; margin-bottom:.75rem; display:flex; align-items:center; gap:.4rem; }
+        .emergency-grid { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+        @media(max-width:480px) { .emergency-grid { grid-template-columns:1fr; } }
+        .emergency-item { display:flex; align-items:center; gap:.5rem; font-size:.875rem; color:var(--text-2); }
+        .emergency-item strong { color:var(--red); }
+
+        /* Effective date pill */
+        .meta { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem; }
+        .meta-pill {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:var(--surface); border:1px solid var(--border);
+            border-radius:999px; padding:.35rem .85rem;
+            font-size:.8rem; color:var(--text-2);
+        }
+        .meta-pill i { color:var(--blue); }
+
+        /* Footer */
+        .page-footer {
+            background:var(--nav-bg); color:rgba(255,255,255,.5);
+            text-align:center; padding:2rem 24px;
+            font-size:.82rem; line-height:1.75;
+        }
+        .page-footer a { color:rgba(255,255,255,.7); }
+        .page-footer a:hover { color:#fff; }
+        .page-footer strong { color:rgba(255,255,255,.85); }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>MediScan</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#symptom-checker">AI Doctor</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#symptom-checker" class="btn">Start Consultation</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="page-hero">
+    <div class="badge"><i class="fas fa-shield-alt"></i> Legal Document</div>
+    <h1>Terms of Service</h1>
+    <p>Please read these terms carefully before using MediScan's AI health services.</p>
+</div>
+
+<!-- Main layout -->
+<div class="page-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+        <h3>Contents</h3>
+        <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#disclaimer">Medical Disclaimer</a></li>
+            <li><a href="#not-a-doctor">Not a Doctor</a></li>
+            <li><a href="#emergency">Emergency Information</a></li>
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#data">Your Data &amp; Privacy</a></li>
+            <li><a href="#ai-accuracy">AI Accuracy</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#acceptable-use">Acceptable Use</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#changes">Changes to Terms</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ol>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+        <div class="meta">
+            <span class="meta-pill"><i class="fas fa-calendar"></i> Effective: July 1, 2026</span>
+            <span class="meta-pill"><i class="fas fa-map-marker-alt"></i> Applicable in India</span>
+            <span class="meta-pill"><i class="fas fa-language"></i> English</span>
+        </div>
+
+        <div class="alert alert-red">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+                <strong>Medical Emergency?</strong>
+                If you or someone near you is experiencing a life-threatening emergency, call <strong>112</strong> or go to the nearest hospital immediately. Do not use MediScan in an emergency.
+            </div>
+        </div>
+
+        <!-- 1. Overview -->
+        <section id="overview">
+            <h2><span class="sec-icon"><i class="fas fa-file-alt"></i></span> 1. Overview</h2>
+            <p>Welcome to <strong>MediScan</strong> ("we", "our", or "the Service"), an AI-powered health information platform developed as a project by students at CBIT, Hyderabad, India. MediScan is accessible at <a href="index.html">mediscan.app</a> (or via local deployment).</p>
+            <p>By accessing or using MediScan — including the AI Doctor chat, Health Report Analyzer, Medicine Reminders, and Hospital Finder — you agree to be bound by these Terms of Service ("Terms"). If you do not agree with any part of these Terms, please do not use the Service.</p>
+            <p>These Terms apply to all users, whether you access the Service as a guest or a registered user.</p>
+        </section>
+
+        <!-- 2. Medical Disclaimer -->
+        <section id="disclaimer">
+            <h2><span class="sec-icon"><i class="fas fa-stethoscope"></i></span> 2. Medical Disclaimer</h2>
+            <div class="alert alert-red">
+                <i class="fas fa-shield-virus"></i>
+                <div>
+                    <strong>Important: MediScan is NOT a substitute for professional medical care.</strong>
+                    All information provided by MediScan is for informational and educational purposes only.
+                </div>
+            </div>
+            <p>MediScan's AI outputs — including symptom analyses, health guidance, medication information, lab report explanations, and diagnosis suggestions — are <strong>not medical advice</strong>. They do not constitute a diagnosis, treatment recommendation, or prescription.</p>
+            <p>You should always:</p>
+            <ul>
+                <li>Consult a qualified medical professional (MBBS / MD / Specialist) before making any health decisions.</li>
+                <li>Not delay seeking medical care because of something you read or heard from MediScan.</li>
+                <li>Not disregard professional medical advice based on MediScan's output.</li>
+                <li>Verify any medication, dosage, or treatment information with a licensed pharmacist or doctor.</li>
+            </ul>
+            <p>The accuracy of AI-generated health information is inherently limited. Medical knowledge evolves rapidly; the AI may not have the most current information.</p>
+        </section>
+
+        <!-- 3. Not a Doctor -->
+        <section id="not-a-doctor">
+            <h2><span class="sec-icon"><i class="fas fa-robot"></i></span> 3. MediScan is Not a Doctor</h2>
+            <p>MediScan is powered by a large language model (Claude 3.5 Sonnet via OpenRouter) combined with a Retrieval-Augmented Generation (RAG) pipeline grounded in ICMR guidelines. While we have implemented medical guardrails and clinical interview protocols, the AI:</p>
+            <ul>
+                <li>Does not have access to your complete medical history unless you share it in conversation.</li>
+                <li>Cannot physically examine you.</li>
+                <li>Cannot order laboratory tests.</li>
+                <li>Cannot issue prescriptions.</li>
+                <li>May make factual errors or have outdated information.</li>
+                <li>Does not replace a licensed MBBS / MD doctor in any capacity.</li>
+            </ul>
+            <div class="alert alert-blue">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    MediScan's clinical interview style is designed to help you articulate your symptoms more clearly — not to provide a final diagnosis. Always share the conversation summary with your actual doctor.
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Emergency -->
+        <section id="emergency">
+            <h2><span class="sec-icon"><i class="fas fa-ambulance"></i></span> 4. Emergency Information</h2>
+            <p>MediScan is <strong>not designed for emergency use</strong>. If you are experiencing any of the following, call emergency services immediately:</p>
+            <ul>
+                <li>Chest pain, pressure, or tightness</li>
+                <li>Difficulty breathing or shortness of breath</li>
+                <li>Signs of stroke (face drooping, arm weakness, speech difficulty)</li>
+                <li>Severe bleeding or trauma</li>
+                <li>Loss of consciousness or unresponsiveness</li>
+                <li>Severe allergic reaction (anaphylaxis)</li>
+                <li>Suicidal thoughts or mental health crisis</li>
+            </ul>
+
+            <div class="emergency-box">
+                <h4><i class="fas fa-phone-alt"></i> India Emergency Numbers</h4>
+                <div class="emergency-grid">
+                    <div class="emergency-item"><i class="fas fa-phone"></i> All Emergencies: <strong>112</strong></div>
+                    <div class="emergency-item"><i class="fas fa-ambulance"></i> Ambulance: <strong>108</strong></div>
+                    <div class="emergency-item"><i class="fas fa-brain"></i> iCall (Mental Health): <strong>9152987821</strong></div>
+                    <div class="emergency-item"><i class="fas fa-flask"></i> Poison Control: <strong>1800-116-117</strong></div>
+                    <div class="emergency-item"><i class="fas fa-fire"></i> Fire: <strong>101</strong></div>
+                    <div class="emergency-item"><i class="fas fa-shield-alt"></i> Police: <strong>100</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Eligibility -->
+        <section id="eligibility">
+            <h2><span class="sec-icon"><i class="fas fa-user-check"></i></span> 5. Eligibility &amp; User Responsibilities</h2>
+            <p>By using MediScan, you represent and warrant that:</p>
+            <ul>
+                <li>You are at least <strong>13 years of age</strong>. Users under 18 should use the Service only with parental or guardian supervision.</li>
+                <li>You will provide accurate information when describing your symptoms or health history.</li>
+                <li>You understand and accept that MediScan is an AI tool, not a licensed healthcare provider.</li>
+                <li>You will not use the Service to seek emergency medical guidance.</li>
+                <li>You will not attempt to circumvent or jailbreak the AI's safety guardrails.</li>
+                <li>You will consult a qualified doctor for any health decisions based on this Service.</li>
+            </ul>
+        </section>
+
+        <!-- 6. Data -->
+        <section id="data">
+            <h2><span class="sec-icon"><i class="fas fa-database"></i></span> 6. Your Data &amp; Privacy</h2>
+            <h3>Information We Collect</h3>
+            <p>When you use MediScan, we may collect:</p>
+            <ul>
+                <li><strong>Conversation data:</strong> Messages you send and AI responses (stored in MongoDB for session continuity).</li>
+                <li><strong>Uploaded files:</strong> PDF medical reports you upload for analysis (processed in memory and stored as extracted text only; original files are not retained after processing).</li>
+                <li><strong>Account information:</strong> If you register via Firebase Authentication: your email address and display name.</li>
+                <li><strong>Medication reminders:</strong> Stored locally in your browser's localStorage only — not transmitted to our servers.</li>
+            </ul>
+
+            <h3>How We Use Your Data</h3>
+            <ul>
+                <li>To provide AI health guidance during your session.</li>
+                <li>To improve the quality of the Service (in aggregate, anonymized form).</li>
+                <li>Conversation data may be used to provide session continuity.</li>
+            </ul>
+
+            <div class="alert alert-blue">
+                <i class="fas fa-lock"></i>
+                <div>
+                    <strong>Guest Mode</strong>
+                    MediScan does not require registration. Guests can use all core features without creating an account. Guest conversations are session-scoped and not linked to any identity.
+                </div>
+            </div>
+
+            <h3>Third-Party Services</h3>
+            <p>MediScan uses the following third-party services, each with their own privacy policies:</p>
+            <ul>
+                <li><strong>OpenRouter / Anthropic Claude:</strong> Your messages are sent to the Claude API for AI processing.</li>
+                <li><strong>Firebase (Google):</strong> Optional authentication and user management.</li>
+                <li><strong>Qdrant Cloud:</strong> Vector database for RAG context retrieval (ICMR guidelines).</li>
+                <li><strong>Overpass API / Nominatim (OpenStreetMap):</strong> Hospital location search — no personal data is shared.</li>
+            </ul>
+        </section>
+
+        <!-- 7. AI Accuracy -->
+        <section id="ai-accuracy">
+            <h2><span class="sec-icon"><i class="fas fa-brain"></i></span> 7. AI Accuracy &amp; Limitations</h2>
+            <p>MediScan's AI responses are generated probabilistically and may:</p>
+            <ul>
+                <li>Contain factual errors or outdated medical information.</li>
+                <li>Misinterpret symptoms, especially in complex or rare conditions.</li>
+                <li>Not account for local Indian disease patterns in all cases.</li>
+                <li>Produce different responses to the same input across sessions.</li>
+            </ul>
+            <p>Our RAG pipeline attempts to ground responses in ICMR (Indian Council of Medical Research) guidelines, but this grounding is not guaranteed for every response. Always verify medical information with a qualified professional.</p>
+            <p>The Health Report Analyzer is designed for <strong>text-based PDFs only</strong>. Scanned images or handwritten reports cannot be accurately analyzed.</p>
+        </section>
+
+        <!-- 8. Privacy Policy -->
+        <section id="privacy">
+            <h2><span class="sec-icon"><i class="fas fa-user-shield"></i></span> 8. Privacy Policy</h2>
+            <p>Your privacy is important to us. This section summarizes how we handle your personal information in accordance with India's <strong>Digital Personal Data Protection Act, 2023 (DPDPA)</strong>.</p>
+            <h3>Data Retention</h3>
+            <ul>
+                <li>Conversation histories are retained for session continuity and may be deleted by clearing your chat.</li>
+                <li>Uploaded PDF files are processed in memory and are not stored permanently.</li>
+                <li>Medication reminders are stored only in your browser — we have no access to them.</li>
+            </ul>
+            <h3>Your Rights</h3>
+            <p>Under the DPDPA, you have the right to:</p>
+            <ul>
+                <li>Access personal data we hold about you.</li>
+                <li>Request correction or deletion of your personal data.</li>
+                <li>Withdraw consent for data processing.</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:vvuppala9@gmail.com">vvuppala9@gmail.com</a>.</p>
+            <h3>Cookies</h3>
+            <p>MediScan uses browser localStorage (not cookies) to store your preferences (language, terms acceptance, medication reminders). No tracking cookies are used.</p>
+        </section>
+
+        <!-- 9. Acceptable Use -->
+        <section id="acceptable-use">
+            <h2><span class="sec-icon"><i class="fas fa-ban"></i></span> 9. Acceptable Use Policy</h2>
+            <p>You agree NOT to use MediScan to:</p>
+            <ul>
+                <li>Attempt to jailbreak, manipulate, or extract sensitive information from the AI.</li>
+                <li>Input false or misleading information to obtain specific diagnoses.</li>
+                <li>Use the Service for any illegal purpose or in violation of Indian law.</li>
+                <li>Impersonate a healthcare professional to other users.</li>
+                <li>Scrape, crawl, or systematically download content from the Service.</li>
+                <li>Upload malicious files or attempt to exploit the PDF analysis feature.</li>
+                <li>Use the Service in any way that could harm yourself or others.</li>
+            </ul>
+            <p>We reserve the right to terminate access for users who violate this policy.</p>
+        </section>
+
+        <!-- 10. Liability -->
+        <section id="liability">
+            <h2><span class="sec-icon"><i class="fas fa-balance-scale"></i></span> 10. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by applicable law, MediScan, its developers, contributors, and affiliates shall not be liable for:</p>
+            <ul>
+                <li>Any health outcome, injury, or harm arising from reliance on AI-generated content.</li>
+                <li>Any inaccuracy, omission, or error in medical information provided.</li>
+                <li>Loss of data, including conversation history or uploaded reports.</li>
+                <li>Any indirect, incidental, consequential, or punitive damages.</li>
+            </ul>
+            <div class="alert alert-green">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>In Plain Language:</strong>
+                    MediScan is a student project built in good faith to improve access to health information. We cannot be held responsible for health decisions made based on AI output. Always see a doctor.
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Changes -->
+        <section id="changes">
+            <h2><span class="sec-icon"><i class="fas fa-sync-alt"></i></span> 11. Changes to These Terms</h2>
+            <p>We may update these Terms of Service from time to time. Changes will be posted on this page with an updated effective date. We will notify registered users via email for material changes.</p>
+            <p>Your continued use of MediScan after changes are posted constitutes your acceptance of the revised Terms.</p>
+            <p>The current version was last updated on <strong>July 1, 2026</strong>.</p>
+        </section>
+
+        <!-- 12. Contact -->
+        <section id="contact">
+            <h2><span class="sec-icon"><i class="fas fa-envelope"></i></span> 12. Contact Us</h2>
+            <p>If you have questions, concerns, or complaints about these Terms or MediScan's practices, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:vvuppala9@gmail.com">vvuppala9@gmail.com</a></li>
+                <li><strong>Institution:</strong> CBIT (Chaitanya Bharathi Institute of Technology), Hyderabad, Telangana, India</li>
+                <li><strong>Response Time:</strong> We aim to respond within 3 business days.</li>
+            </ul>
+            <div class="alert alert-blue">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    By using MediScan, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service, the Medical Disclaimer, and the Privacy Policy summarized herein.
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer">
+    <p>&copy; 2026 MediScan. All rights reserved. | Built with ❤️ at CBIT, Hyderabad</p>
+    <p><a href="index.html">Home</a> &nbsp;·&nbsp; <a href="index.html#symptom-checker">AI Doctor</a> &nbsp;·&nbsp; <a href="mailto:vvuppala9@gmail.com">Contact</a></p>
+    <p style="margin-top:.5rem"><strong>Medical Emergency: call 112</strong></p>
+</footer>
+
+</body>
+</html>

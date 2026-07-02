@@ -1,0 +1,136 @@
+COMMON MEDICINES IN INDIA — REFERENCE GUIDE
+
+=== ANALGESICS AND ANTIPYRETICS ===
+Paracetamol (Acetaminophen):
+Brand names: Crocin, Dolo 650, Calpol, Tylenol (less common in India), Metacin, Fepanil
+Uses: Fever, mild to moderate pain (headache, toothache, body ache), post-vaccination fever.
+Dosage: Adults — 500mg-1000mg every 4-6 hours, maximum 4g/day. Children — 10-15 mg/kg every 4-6 hours.
+Important: Do NOT use ibuprofen or aspirin for dengue fever (risk of bleeding). Paracetamol is safe for dengue.
+Caution: Avoid alcohol. Liver toxicity with overdose or chronic alcohol use.
+
+Ibuprofen:
+Brand names: Brufen, Combiflam (ibuprofen + paracetamol), Advil (less common)
+Uses: Fever, pain, inflammation — arthritis, menstrual cramps, sports injuries.
+Avoid: In dengue, peptic ulcer, kidney disease, third trimester pregnancy. Take with food.
+
+Diclofenac:
+Brand names: Voveran, Voltaren, Dynapar
+Uses: Acute pain, arthritis, musculoskeletal pain, dysmenorrhoea.
+Available as: Tablets, injections, gel (topical).
+
+=== ANTIBIOTICS ===
+Amoxicillin/Amoxicillin-Clavulanate:
+Brand names: Mox, Novamox, Augmentin, Amoxyclav
+Uses: Throat infections, ear infections, sinusitis, pneumonia, UTI.
+Dosage: 250-500mg three times daily for 5-10 days.
+Important: Complete the full course. Do not stop when feeling better.
+
+Azithromycin:
+Brand names: Zithromax, Azee, Azithral
+Uses: Respiratory infections, typhoid, chlamydia. Z-pack — 500mg day 1, then 250mg days 2-5.
+Advantage: Once daily dosing, shorter course.
+
+Ciprofloxacin:
+Brand names: Ciplox, Cifran, Neofloxin
+Uses: Typhoid, UTI, traveller's diarrhoea, respiratory infections.
+Caution: Avoid in children and pregnancy. Can cause tendon damage.
+
+Metronidazole:
+Brand names: Flagyl, Metrogyl, Aristogyl
+Uses: Amoebiasis, giardiasis, bacterial vaginosis, dental infections, anaerobic infections.
+Dosage: 400mg three times daily for 5-7 days.
+Avoid alcohol during treatment (severe reaction).
+
+Doxycycline:
+Brand names: Doxt-SL, Vibramycin, Doxybac
+Uses: Malaria prophylaxis, cholera, rickettsial infections, acne.
+Take with food and water. Avoid sun exposure (photosensitivity).
+
+=== ANTACIDS AND GI MEDICINES ===
+Pantoprazole/Omeprazole:
+Brand names: Pan, Pantodac, Omez, Prilosec
+Uses: Acidity, GERD, peptic ulcer, H. pylori eradication.
+Take 30 minutes before meals. Usually safe for long-term use.
+
+Ranitidine (largely withdrawn — replaced by Pantoprazole):
+Earlier brand: Rantac, Zinetac.
+
+Ondansetron:
+Brand names: Emeset, Ondem, Zofran
+Uses: Nausea and vomiting — chemotherapy, surgery, gastroenteritis.
+Dosage: 4-8mg.
+
+ORS (Oral Rehydration Salts):
+Brand names: Electral, ORS-Wallis, Pedialyte, homemade (6 tsp sugar + 0.5 tsp salt per litre water)
+Uses: Dehydration from diarrhoea, vomiting, heat exhaustion. Essential first-line treatment.
+Free at all government health centres and anganwadis.
+
+=== ANTIDIABETICS ===
+Metformin:
+Brand names: Glyciphage, Glucophage, Bigomet, Obimet
+Uses: First-line drug for Type 2 diabetes. Also used in PCOS.
+Dosage: 500mg-2000mg daily with meals.
+Side effects: Nausea, diarrhoea (usually temporary). Avoid in kidney disease.
+
+Glimepiride/Glipizide (Sulfonylureas):
+Brand names: Amaryl, Glimisave, Glimpid
+Uses: Type 2 diabetes, add-on to Metformin.
+Risk of hypoglycaemia (low blood sugar) — always carry sugar/glucose.
+
+Insulin:
+Types: Rapid-acting (Novorapid, Humalog), Intermediate (NPH/Humulin N), Long-acting (Lantus/Glargine, Tresiba/Degludec).
+Available at Jan Aushadhi stores at subsidised rates.
+
+=== ANTIHYPERTENSIVES ===
+Amlodipine:
+Brand names: Amlip, Amlong, Stamlo, Norvasc
+Uses: Hypertension, angina. Once daily. Safe in elderly.
+
+Enalapril/Ramipril (ACE inhibitors):
+Brand names: Envas, Cardace, Altace
+Uses: Hypertension, heart failure, diabetic kidney protection.
+Side effect: Dry cough — switch to ARB (Losartan) if cough occurs.
+
+Losartan/Telmisartan (ARBs):
+Brand names: Losar, Telma, Telpres
+Uses: Hypertension, diabetic nephropathy. Once daily.
+Preferred over ACE inhibitors if cough develops.
+
+Atenolol/Metoprolol (Beta-blockers):
+Brand names: Aten, Metolar, Betaloc
+Uses: Hypertension, angina, heart failure, migraine prevention, hyperthyroidism.
+Do not stop abruptly — may cause rebound hypertension/chest pain.
+
+=== VITAMINS AND SUPPLEMENTS ===
+Vitamin D3 (Calciferol):
+Brand names: D-Rise, Uprise-D3, Calcirol, Arachitol
+Uses: Vitamin D deficiency (very common in India despite sun exposure), bone health, immunity.
+Dosage: Weekly 60,000 IU for 8-12 weeks, then maintenance monthly.
+
+Vitamin B12 (Methylcobalamin):
+Brand names: Methylcobal, Neurobion, Cobadex
+Uses: B12 deficiency (common in vegetarians), neuropathy, anaemia.
+Note: Plant foods do not contain B12. All strict vegetarians/vegans should supplement.
+
+Iron + Folic Acid:
+Brand names: Fefol, Livogen, Dexorange, Autrin
+Uses: Iron deficiency anaemia, pregnancy supplementation.
+Take with Vitamin C (lemon juice/amla). Avoid tea/coffee within 2 hours.
+Government programme: Free IFA tablets under National Health Mission at PHCs.
+
+Zinc:
+Brand names: Zincovit, Zinc-P, Zinconia
+Uses: Childhood diarrhoea treatment, immunity, wound healing.
+ICMR recommends zinc 20mg daily for 14 days with ORS in children with diarrhoea.
+
+=== EMERGENCY MEDICINES ===
+Aspirin 300mg: Given immediately if heart attack suspected (chew, don't swallow). Not for fever in children or dengue.
+
+Sorbitrate/Nitroglycerine: Under tongue for angina chest pain. If no relief in 5 minutes — call 112, suspected heart attack.
+
+Salbutamol Inhaler (Ventolin, Asthalin): For acute asthma attack — 2-4 puffs every 20 minutes. If no response — emergency.
+
+Glucagon/Sugar: For hypoglycaemia (low blood sugar) in diabetics — give glucose/sugar water immediately if conscious.
+
+=== JAN AUSHADHI — GENERIC MEDICINES ===
+Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP) provides quality generic medicines at 50-90% lower cost than branded medicines at Jan Aushadhi Kendras across India. Helpline: 1800-180-8080.

@@ -1,0 +1,77 @@
+ICMR CLINICAL GUIDELINES — COMMON DISEASES IN INDIA
+
+=== DENGUE FEVER ===
+Dengue is a mosquito-borne viral disease caused by dengue virus (DENV 1-4) transmitted by Aedes aegypti mosquitoes.
+
+Symptoms: Sudden high fever (102-104°F), severe headache, pain behind the eyes, joint and muscle pain (breakbone fever), skin rash appearing 2-5 days after fever onset, mild bleeding (nosebleed, gum bleeding), fatigue, nausea, vomiting.
+
+Warning signs (seek immediate hospital care): Abdominal pain or tenderness, persistent vomiting, rapid breathing, bleeding from gums or nose, fatigue and restlessness, blood in vomit or stool, platelet count below 100,000.
+
+Diagnosis: NS1 antigen test (first 5 days), IgM/IgG antibody test, CBC with platelet count.
+
+Treatment (ICMR): No specific antiviral. Paracetamol (not ibuprofen or aspirin) for fever. Oral rehydration (ORS), IV fluids for severe cases. Monitor platelet count daily. Hospitalize if platelets fall below 50,000 or warning signs present.
+
+Prevention: Eliminate stagnant water, use mosquito nets, repellents containing DEET. Aedes mosquitoes bite during daytime.
+
+Emergency: Call 112 or go to nearest government hospital. PHC/CHC can provide initial assessment.
+
+=== MALARIA ===
+Malaria is caused by Plasmodium parasites transmitted through Anopheles mosquito bites. P. falciparum is the most dangerous species common in India.
+
+Symptoms: Cyclical fever with chills and sweating (every 48-72 hours), severe headache, nausea and vomiting, muscle pain, fatigue, anaemia, jaundice (yellow skin/eyes) in severe cases.
+
+Severe Malaria Warning Signs: High fever above 104°F, seizures, loss of consciousness, difficulty breathing, dark urine (blackwater fever), repeated vomiting.
+
+Diagnosis: Rapid Diagnostic Test (RDT) or blood smear microscopy. Available at PHC level across India.
+
+Treatment (ICMR National Programme): P. vivax — Chloroquine + Primaquine (14 days). P. falciparum — Artemisinin Combination Therapy (ACT): Artesunate + Amodiaquine or Artemether-Lumefantrine. Severe malaria — IV Artesunate in hospital.
+
+Prevention: Insecticide-treated mosquito nets (ITN), indoor residual spraying. Prophylaxis for travellers to endemic areas.
+
+NVBDCP helpline: 1800-11-0002. Treatment is free at government health facilities.
+
+=== TYPHOID FEVER ===
+Typhoid is caused by Salmonella typhi, spread through contaminated food and water. Highly prevalent in India due to sanitation challenges.
+
+Symptoms: Gradually rising fever (up to 104°F), headache, weakness, abdominal pain, constipation or diarrhoea, rose spots on trunk (rare), enlarged spleen and liver, coated tongue.
+
+Stages: Week 1 — fever gradually rises. Week 2 — high sustained fever, abdomen distended. Week 3 — risk of complications (intestinal perforation, bleeding). Week 4 — gradual recovery if treated.
+
+Diagnosis: Widal test (less specific), blood culture (gold standard in first week), stool culture.
+
+Treatment (ICMR): First line — Azithromycin or Fluoroquinolones (Ciprofloxacin) for 7-14 days. Drug-resistant typhoid — Cefixime or IV Ceftriaxone. Paracetamol for fever. ORS and plenty of fluids. Soft diet.
+
+Prevention: Safe drinking water (boil or filter), hand hygiene, avoid street food, typhoid vaccine (TCV or Vi polysaccharide vaccine).
+
+=== TUBERCULOSIS (TB) ===
+TB is caused by Mycobacterium tuberculosis. India accounts for 26% of global TB cases. Free treatment available under Nikshay / National TB Elimination Programme (NTEP).
+
+Symptoms: Persistent cough for 2+ weeks, cough with blood (haemoptysis), chest pain, weight loss, night sweats, fever, fatigue, loss of appetite.
+
+Diagnosis: Sputum smear microscopy, GeneXpert/CBNAAT (rapid molecular test), chest X-ray, IGRA blood test.
+
+Treatment: DOTS (Directly Observed Treatment, Short-course) — 6 months minimum. 2 months intensive phase (HRZE: Isoniazid, Rifampicin, Pyrazinamide, Ethambutol) + 4 months continuation phase (HR). Drug-Resistant TB (MDR-TB) — longer treatment 18-24 months with second-line drugs.
+
+Nikshay Poshan Yojana: Rs 500/month nutritional support for TB patients. Call 1800-11-6666 for Nikshay helpline.
+
+=== COVID-19 ===
+Caused by SARS-CoV-2 virus. Spreads via respiratory droplets and aerosols.
+
+Symptoms: Fever, dry cough, fatigue, loss of taste/smell (anosmia), sore throat, body aches, diarrhoea, breathlessness in severe cases.
+
+Warning Signs (seek hospital): Oxygen saturation below 94%, breathing rate above 30/min, persistent chest pain, confusion, blue lips.
+
+Treatment: Mild — rest, paracetamol, ORS, isolation. Moderate-Severe — oxygen therapy, corticosteroids (Dexamethasone), anticoagulants, Remdesivir in selected cases. Monitor SpO2 with pulse oximeter.
+
+Vaccination: COVID-19 vaccines available at government centres free of charge. CoWIN portal for registration.
+
+=== CHIKUNGUNYA ===
+Viral disease transmitted by Aedes mosquitoes, common during monsoon season in India.
+
+Symptoms: Sudden fever, severe joint pain (arthralgia) affecting hands, wrists, ankles, knees — can be debilitating. Muscle pain, headache, nausea, fatigue, rash.
+
+Key differentiator from dengue: Joint pain is more severe and prolonged in chikungunya. Platelet count usually normal (unlike dengue).
+
+Treatment: No specific antiviral. Paracetamol for fever and pain. NSAIDs (after fever subsides) for joint pain. Rest and hydration. Joint pain may persist for weeks to months.
+
+Prevention: Same as dengue — eliminate mosquito breeding sites, use repellents and nets.

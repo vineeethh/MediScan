@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MediScan</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediScan</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <button id="darkModeToggle" class="dark-mode-toggle-dash" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-menu">
+                    <img id="userPhoto" src="" alt="User" class="user-photo">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading dashboard...</p>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div id="dashboardContent" class="dashboard-content" style="display: none;">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h1>Welcome back, <span id="welcomeName"></span>! 👋</h1>
+                <p class="last-login">Last login: <span id="lastLogin"></span></p>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalSearches">0</h3>
+                        <p>Total Searches</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalConversations">0</h3>
+                        <p>Conversations</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="uniqueSymptoms">0</h3>
+                        <p>Unique Symptoms</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="mostUsedDoctor">-</h3>
+                        <p>Most Used Doctor</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Section -->
+            <div class="section-container">
+                <div class="section-header">
+                    <h2><i class="fas fa-clock"></i> Recent Activity</h2>
+                    <button id="clearHistoryBtn" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Clear All History
+                    </button>
+                </div>
+                <div id="recentActivity" class="activity-list">
+                    <!-- Activity items will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Search History Section -->
+            <div class="section-container">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> Search History</h2>
+                    <div class="search-controls">
+                        <input type="text" id="searchFilter" placeholder="Filter by symptoms..." class="filter-input">
+                        <select id="doctorTypeFilter" class="filter-select">
+                            <option value="">All Doctor Types</option>
+                            <option value="general">General Physician</option>
+                            <option value="cardiologist">Cardiologist</option>
+                            <option value="dermatologist">Dermatologist</option>
+                            <option value="pediatrician">Pediatrician</option>
+                            <option value="neurologist">Neurologist</option>
+                            <option value="orthopedic">Orthopedic</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Symptoms</th>
+                                <th>Doctor Type</th>
+                                <th>Diagnosis</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="noHistory" class="no-data" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <p>No search history found</p>
+                    <a href="index.html" class="btn btn-primary">Start Your First Search</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="error-state" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h2>Error Loading Dashboard</h2>
+            <p id="errorMessage">Something went wrong. Please try again.</p>
+            <button onclick="location.reload()" class="btn btn-primary">Retry</button>
+        </div>
+    </div>
+
+    <!-- Diagnosis Detail Modal -->
+    <div id="diagnosisModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-file-medical"></i> Diagnosis Details</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="diagnosisDetails">
+                <!-- Diagnosis details will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="dashboard.js"></script>
+    
+    <!-- Dark Mode Script -->
+    <script>
+        // Dark Mode Toggle for Dashboard
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved dark mode preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                html.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+</body>
+</html>

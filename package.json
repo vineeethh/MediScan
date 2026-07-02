@@ -1,0 +1,13 @@
+{
+  "name": "mediscan-ai-doctor",
+  "version": "1.0.0",
+  "description": "Modern AI-powered health symptom checker with React",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": ["healthcare", "AI", "symptom-checker", "react"],
+  "author": "Team 111",
+  "license": "MIT"
+}

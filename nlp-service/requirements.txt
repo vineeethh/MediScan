@@ -1,0 +1,17 @@
+# Run with: python3.12
+flask
+flask-cors
+numpy<2
+python-dotenv
+
+# RAG pipeline
+langchain
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+langchain-qdrant
+sentence-transformers==3.1.0
+transformers==4.44.0
+torch==2.2.2
+qdrant-client
+rank-bm25

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediScan - AI-Powered Health Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=5.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediScan</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#symptom-checker" class="nav-link">AI Doctor</a></li>
+                <li><a href="#reports" class="nav-link">Reports</a></li>
+                <li><a href="#reminders" class="nav-link">Reminders</a></li>
+                <li><a href="#hospitals" class="nav-link">Hospitals</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li id="authArea"><a href="auth.html" class="login-link">Login</a></li>
+                <li>
+                    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero-section">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <div class="carousel-content">
+                    <div class="hero-badge fade-in"><i class="fas fa-circle-check"></i> AI-Powered · ICMR Guidelines</div>
+                    <h1 class="fade-in">Your Personal<br>AI Doctor</h1>
+                    <p class="fade-in-delay">Get evidence-based health guidance in English, Hindi, Tamil &amp; Telugu — available 24/7 for every Indian.</p>
+                    <a href="#symptom-checker" class="cta-button fade-in-delay-2"><i class="fas fa-comment-medical"></i> Start Consultation</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <div class="hero-badge fade-in"><i class="fas fa-file-medical-alt"></i> Instant Analysis</div>
+                    <h1 class="fade-in">Understand Your<br>Health Reports</h1>
+                    <p class="fade-in-delay">Upload your blood test, lipid panel, or thyroid report and get a plain-language explanation with every abnormal value flagged.</p>
+                    <a href="#reports" class="cta-button fade-in-delay-2"><i class="fas fa-upload"></i> Analyze Report</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <div class="hero-badge fade-in"><i class="fas fa-map-pin"></i> OpenStreetMap Powered</div>
+                    <h1 class="fade-in">Find Hospitals<br>Near You</h1>
+                    <p class="fade-in-delay">Locate hospitals, PHCs, and clinics around you instantly with live maps — no registration needed.</p>
+                    <a href="#hospitals" class="cta-button fade-in-delay-2"><i class="fas fa-location-dot"></i> Find Hospitals</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-control next" onclick="moveCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <strong>4 Languages</strong>
+                    <span>English, Hindi, Tamil, Telugu</span>
+                </div>
+                <div class="stat-item">
+                    <strong>RAG-Powered</strong>
+                    <span>ICMR medical knowledge base</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Claude AI</strong>
+                    <span>claude-3.5-sonnet via OpenRouter</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Free Forever</strong>
+                    <span>No account required</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose MediScan?</h2>
+                <p class="section-subtitle">Built for India — combining the latest AI with trusted medical guidelines to make quality health guidance accessible to everyone.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>RAG-Powered AI</h3>
+                    <p>Answers grounded in ICMR guidelines and Indian medical knowledge via retrieval-augmented generation with Qdrant vector search.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Clinical Interview Style</h3>
+                    <p>AI takes a systematic history — one question at a time — just like a real doctor consultation, not a rigid form.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-medical-alt"></i></div>
+                    <h3>Report Analyzer</h3>
+                    <p>Upload blood tests, lipid panels, thyroid reports and get plain-language explanations with every abnormal value flagged.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Safe &amp; Responsible</h3>
+                    <p>Built-in medical guardrails, emergency escalation to 112, and mental health support via iCall — always directing you to professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3>4 Indian Languages</h3>
+                    <p>Converse in English, Hindi, Tamil, or Telugu — AI responds in your chosen language, making healthcare accessible to all.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Medicine Reminders</h3>
+                    <p>Set medication reminders with browser push notifications — never miss a dose, even without signing up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Doctor Chat -->
+    <section id="symptom-checker" class="chatbot-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Doctor</h2>
+                <p class="section-subtitle">Describe your symptoms and get evidence-based health guidance. The AI will ask relevant follow-up questions to give you the best advice.</p>
+                <div class="disclaimer-badge">
+                    <i class="fas fa-info-circle"></i>
+                    For emergencies, call <strong>112</strong> immediately. This tool is for information only.
+                </div>
+            </div>
+            <div class="chatbot-container">
+                <div class="chat-window">
+                    <div class="chat-header">
+                        <div class="chat-header-info">
+                            <i class="fas fa-stethoscope"></i>
+                            <div>
+                                <h4>MediScan AI Doctor</h4>
+                                <span class="status">Online · Powered by Claude AI + ICMR Guidelines</span>
+                            </div>
+                        </div>
+                        <div class="chat-header-actions">
+                            <div class="language-selector">
+                                <i class="fas fa-globe"></i>
+                                <select id="languageSelect">
+                                    <option value="en">🇬🇧 English</option>
+                                    <option value="hi">🇮🇳 हिंदी</option>
+                                    <option value="ta">🇮🇳 தமிழ்</option>
+                                    <option value="te">🇮🇳 తెలుగు</option>
+                                </select>
+                            </div>
+                            <button id="clearChat" class="icon-button" title="Clear chat">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="chatMessages" class="chat-messages">
+                        <div class="message bot-message">
+                            <div class="message-avatar"><i class="fas fa-stethoscope"></i></div>
+                            <div class="message-content">
+                                <p>Hello! I'm MediScan's AI Doctor.</p>
+                                <p style="color:#ef4444;font-size:0.85rem"><strong>⚠️ If this is an emergency, call 112 immediately.</strong></p>
+                                <div class="terms-inline-banner">
+                                    <i class="fas fa-lock"></i>
+                                    <div>
+                                        <strong>Accept Terms to Continue</strong>
+                                        <p style="margin:0.2rem 0 0;font-size:0.85rem">Click the input box below to review and accept our Terms of Service before chatting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea
+                                id="chatInput"
+                                placeholder="Example: I have a fever of 101°F for 2 days, body aches, and a bad headache. I'm 28 years old with no chronic conditions..."
+                                rows="3"
+                                autocomplete="off"
+                            ></textarea>
+                        </div>
+                        <button id="sendMessage" class="send-button">
+                            <i class="fas fa-paper-plane"></i> Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Report Analyzer -->
+    <section id="reports" class="reports-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Health Report Analyzer</h2>
+                <p class="section-subtitle">Upload your medical report (blood test, lipid profile, thyroid, kidney function, etc.) and get a plain-language AI explanation with flagged abnormal values.</p>
+            </div>
+            <div class="report-analyzer">
+                <div class="report-upload-area" id="reportDropZone">
+                    <i class="fas fa-file-medical fa-3x"></i>
+                    <h3>Drop your PDF report here</h3>
+                    <p>or</p>
+                    <label class="upload-btn">
+                        <i class="fas fa-upload"></i> Browse File
+                        <input type="file" id="reportFileInput" accept=".pdf" hidden>
+                    </label>
+                    <p class="upload-hint">Supports text-based PDF files up to 10MB</p>
+                </div>
+                <div id="reportFileName" class="report-file-name" style="display:none"></div>
+                <button id="analyzeReportBtn" class="primary-button" style="display:none">
+                    <i class="fas fa-microscope"></i> Analyze Report
+                </button>
+                <div id="reportLoader" class="report-loader" style="display:none">
+                    <div class="spinner"></div>
+                    <p>Analyzing your report with AI...</p>
+                </div>
+                <div id="reportAnalysisResult" class="report-result" style="display:none">
+                    <div class="report-urgency" id="reportUrgency"></div>
+                    <div class="report-summary" id="reportSummary"></div>
+                    <div class="abnormal-values" id="reportAbnormal"></div>
+                    <div class="report-recommendations" id="reportRecommendations"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicine Reminders -->
+    <section id="reminders" class="reminders-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Medicine Reminders</h2>
+                <p class="section-subtitle">Set up medication reminders and get browser push notifications so you never miss a dose.</p>
+            </div>
+            <div class="reminders-layout">
+                <div class="reminder-form-card">
+                    <h3><i class="fas fa-plus-circle"></i> Add Reminder</h3>
+                    <div class="form-group">
+                        <label>Medicine Name</label>
+                        <input type="text" id="reminderName" placeholder="e.g. Crocin 500mg">
+                    </div>
+                    <div class="form-group">
+                        <label>Dosage</label>
+                        <input type="text" id="reminderDosage" placeholder="e.g. 1 tablet">
+                    </div>
+                    <div class="form-group">
+                        <label>Frequency</label>
+                        <select id="reminderFrequency">
+                            <option value="once_daily">Once daily</option>
+                            <option value="twice_daily">Twice daily</option>
+                            <option value="thrice_daily">Three times daily</option>
+                            <option value="four_times_daily">Four times daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="as_needed">As needed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Time(s)</label>
+                        <div id="timeInputsContainer">
+                            <input type="time" class="time-input" value="08:00">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Instructions (optional)</label>
+                        <input type="text" id="reminderInstructions" placeholder="e.g. Take after meals">
+                    </div>
+                    <button id="addReminderBtn" class="primary-button">
+                        <i class="fas fa-bell"></i> Set Reminder
+                    </button>
+                    <div id="notifPermissionBanner" class="notif-banner" style="display:none">
+                        <i class="fas fa-bell-slash"></i>
+                        Notifications blocked. <button id="enableNotifBtn" onclick="Notification.requestPermission()">Enable</button>
+                    </div>
+                </div>
+                <div class="reminders-list-card">
+                    <h3><i class="fas fa-list"></i> Your Reminders</h3>
+                    <div id="remindersList" class="reminders-list">
+                        <p class="empty-state">No reminders yet. Add one to get started!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Finder -->
+    <section id="hospitals" class="hospitals-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Nearby Hospitals</h2>
+                <p class="section-subtitle">Locate hospitals, PHCs, and clinics near you using live OpenStreetMap data — completely free, no API key needed.</p>
+            </div>
+            <div class="hospital-finder">
+                <div class="search-box">
+                    <input type="text" id="locationInput" placeholder="Enter city, area, or landmark (e.g. Jubilee Hills, Hyderabad)">
+                    <button id="currentLocationBtn" class="location-button">
+                        <i class="fas fa-location-crosshairs"></i> Use My Location
+                    </button>
+                    <button id="searchHospitalsBtn" class="primary-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div id="hospitalResults" class="hospital-results"></div>
+                <div id="map" class="map-container" style="display:none"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About MediScan</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>AI-Powered Health Guidance for India</h3>
+                    <p>MediScan is an AI-powered health assistant built specifically for Indian users. It uses Claude AI (via OpenRouter) combined with a Retrieval-Augmented Generation (RAG) pipeline grounded in ICMR guidelines to provide reliable, contextually accurate health information.</p>
+                    <p>We aim to reduce dependence on unreliable online sources and minimize health misinformation by providing evidence-based, accessible health insights tailored to the Indian context.</p>
+                    <div class="about-features">
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>RAG pipeline with ICMR medical guidelines</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Multilingual: English, Hindi, Tamil, Telugu</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Health report PDF analyzer</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Medicine reminder notifications</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Nearby hospital finder (OpenStreetMap)</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Built-in medical guardrails</span></div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder"><i class="fas fa-user-md"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Have questions or feedback? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions or feedback? We'd love to hear from you!</p>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><span>vvuppala9@gmail.com</span></div>
+                    <div class="contact-item"><i class="fas fa-phone"></i><span>+91 7702185470</span></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>CBIT, Hyderabad</span></div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="primary-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> MediScan</h3>
+                    <p>AI-powered health assistant for India. For emergencies, call <strong>112</strong>.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#symptom-checker">AI Doctor</a></li>
+                        <li><a href="#reports">Report Analyzer</a></li>
+                        <li><a href="#hospitals">Find Hospitals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <ul>
+                        <li>Medical Emergency: <strong>112</strong></li>
+                        <li>Ambulance: <strong>108</strong></li>
+                        <li>iCall (Mental Health): <strong>9152987821</strong></li>
+                        <li>Poison Control: <strong>1800-116-117</strong></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="terms.html#disclaimer">Medical Disclaimer</a></li>
+                        <li><a href="terms.html#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediScan. All rights reserved. | <strong>Disclaimer:</strong> This tool is for informational purposes only. It does not replace professional medical advice, diagnosis, or treatment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <button id="floatingChatBtn" class="floating-chat-btn" title="Open AI Doctor" style="display:none">
+        <i class="fas fa-comment-medical"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display:none">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="modal-overlay" style="display:none">
+        <div class="modal-card">
+            <div class="modal-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Before We Begin</h3>
+            <p class="modal-subtitle">If this is an emergency, <strong>call 112</strong> immediately.</p>
+            <label class="terms-checkbox-row" for="termsCheck">
+                <input type="checkbox" id="termsCheck">
+                <span>I agree to the <a href="terms.html" target="_blank" class="terms-link">Terms of Service</a> and understand that MediScan is AI, not a licensed doctor, and I will discuss any information provided with a physician. Questions or complaints: <a href="mailto:vvuppala9@gmail.com" class="terms-link">vvuppala9@gmail.com</a></span>
+            </label>
+            <button id="termsAgreeBtn" class="primary-button" disabled>
+                <i class="fas fa-check"></i> I Agree &amp; Continue
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js?v=5.0"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').catch(() => {});
+        }
+    </script>
+</body>
+</html>

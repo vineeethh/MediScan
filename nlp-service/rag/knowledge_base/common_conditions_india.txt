@@ -1,0 +1,78 @@
+COMMON HEALTH CONDITIONS IN INDIA — CLINICAL REFERENCE
+
+=== DIABETES MELLITUS ===
+India is the diabetes capital of the world with 77+ million diabetics (Type 2 dominant).
+
+Symptoms: Frequent urination (polyuria), excessive thirst (polydipsia), unexplained weight loss, blurred vision, slow healing wounds, frequent infections, tingling/numbness in hands and feet (neuropathy), fatigue.
+
+Diagnosis: Fasting Blood Sugar (FBS) ≥126 mg/dL, Post-Prandial (PP) ≥200 mg/dL, HbA1c ≥6.5%, Random Blood Sugar ≥200 mg/dL with symptoms.
+
+Treatment: Lifestyle modification (diet + exercise) first. Metformin — first-line oral drug. Add Sulfonylureas (Glipizide, Glimepiride), DPP-4 inhibitors (Sitagliptin), SGLT2 inhibitors (Dapagliflozin). Insulin for Type 1 and advanced Type 2. Monitor HbA1c every 3 months. Target: HbA1c below 7%.
+
+Indian diet advice: Reduce rice and white bread (high glycaemic index). Include millets (jowar, bajra, ragi), pulses (dal), bitter gourd (karela), fenugreek (methi). Avoid maida, sugar, fruit juices.
+
+Complications: Diabetic nephropathy (kidney), retinopathy (eye), neuropathy (nerve), foot ulcers, cardiovascular disease. Annual screening for complications essential.
+
+Government support: Pradhan Mantri Jan Arogya Yojana (Ayushman Bharat) covers diabetes treatment.
+
+=== HYPERTENSION (HIGH BLOOD PRESSURE) ===
+Affects 25-30% of Indian adults. Silent killer — often no symptoms until complications.
+
+Symptoms: Usually asymptomatic. May have: headache (morning), dizziness, blurred vision, nose bleeds, chest pain, shortness of breath in severe cases.
+
+Diagnosis: Blood pressure ≥140/90 mmHg on two separate readings. Stage 1: 130-139/80-89. Stage 2: ≥140/90. Hypertensive crisis: >180/120.
+
+Treatment: Lifestyle — reduce salt (below 5g/day), DASH diet, exercise 30 min/day, reduce alcohol, quit smoking, weight loss. Medications — Amlodipine (calcium channel blocker), Enalapril/Ramipril (ACE inhibitor), Losartan (ARB), Hydrochlorothiazide (diuretic), Atenolol (beta blocker). Take medications daily — never stop abruptly.
+
+Indian diet: Avoid pickles (achar), papad, salted snacks. Reduce coconut oil. Include banana, spinach (palak), garlic, amla.
+
+=== ANAEMIA ===
+Iron deficiency anaemia is extremely common in India, especially in women and children. India has one of the highest anaemia burdens globally.
+
+Symptoms: Fatigue, weakness, pale skin/conjunctiva/nails, shortness of breath on exertion, dizziness, rapid heartbeat, headache, cold hands and feet, brittle nails, pica (craving for clay/ice).
+
+Diagnosis: Haemoglobin (Hb) — Normal: Men >13 g/dL, Women >12 g/dL. Mild anaemia: 10-12 g/dL. Moderate: 7-10 g/dL. Severe: below 7 g/dL. Serum ferritin, peripheral blood smear.
+
+Treatment: Iron supplements (Ferrous sulphate/fumarate) + Vitamin C for absorption. Folic acid supplementation. B12 injections for B12 deficiency. Treat underlying cause. Weekly Iron Folic Acid (IFA) supplementation — WIFS programme for adolescent girls.
+
+Indian diet: Iron-rich foods — spinach (palak), lentils (masoor dal), rajma, chana, jaggery (gur), amla (Vitamin C enhances iron absorption), ragi, green leafy vegetables. Avoid tea/coffee with meals (inhibits iron absorption).
+
+Government programme: Anaemia Mukt Bharat — free IFA tablets at health centres.
+
+=== JAUNDICE (VIRAL HEPATITIS) ===
+Hepatitis A and E are common in India, spread through contaminated water and food.
+
+Symptoms: Yellow discolouration of eyes and skin (icterus), dark urine (tea-coloured), pale stools (clay-coloured), fatigue, loss of appetite, nausea, abdominal pain (right upper quadrant), fever (Hepatitis A/E), itching.
+
+Types in India: Hepatitis A — common, self-limiting, spreads via contaminated food/water. Hepatitis B — chronic, spread by blood/sexual contact, vaccine preventable. Hepatitis C — chronic, blood-borne. Hepatitis E — common during monsoon, dangerous in pregnancy.
+
+Diagnosis: Liver function tests (bilirubin, SGOT, SGPT, alkaline phosphatase), Hepatitis serology (HBsAg, anti-HCV, IgM anti-HAV, IgM anti-HEV).
+
+Treatment: Hepatitis A/E — rest, adequate nutrition, avoid alcohol, stay hydrated. No specific antiviral. Hepatitis B chronic — Tenofovir or Entecavir. Hepatitis C — Direct-acting antivirals (DAAs) — Sofosbuvir + Daclatasvir (available under NPHE programme free of cost).
+
+Diet: High carbohydrate, low fat. Avoid alcohol completely. Include rice, dal, fruits. Avoid oily and spicy food.
+
+=== RESPIRATORY INFECTIONS ===
+Common Cold: Rhinovirus. Self-limiting. Saline nasal drops, steam inhalation, honey + ginger + tulsi (traditional Indian remedy). Paracetamol for fever and pain. Antibiotics NOT needed.
+
+Sinusitis: Facial pain/pressure, nasal congestion, thick nasal discharge, reduced smell. Steam inhalation, saline rinse. Antibiotics only if bacterial (persistent >10 days with worsening).
+
+Pharyngitis/Tonsillitis: Sore throat, difficulty swallowing, fever. If streptococcal — Amoxicillin for 10 days to prevent rheumatic fever. Gargle with warm salt water, tulsi-ginger-honey steam.
+
+Pneumonia: High fever, productive cough, breathlessness, chest pain, oxygen saturation drop. Hospital admission often needed. Antibiotics: Amoxicillin-clavulanate, Azithromycin. IV antibiotics for severe cases.
+
+=== SKIN CONDITIONS ===
+Fungal infections (Tinea/Ringworm): Common in India's humid climate. Ring-shaped rash, itching, scaling. Clotrimazole/Miconazole cream. Keep area dry.
+
+Scabies: Intense itching especially at night, burrow tracks between fingers. Permethrin 5% cream or Ivermectin oral. Treat all family members simultaneously.
+
+Chickenpox (Varicella): Fever followed by itchy blister rash. Calamine lotion, paracetamol, antihistamines. Avoid scratching. Isolate patient. Varicella vaccine available.
+
+=== GASTROINTESTINAL CONDITIONS ===
+Diarrhoea: Very common in India. Key treatment — ORS (Oral Rehydration Solution): 1 litre water + 6 teaspoons sugar + half teaspoon salt. Zinc 20mg for 14 days in children. BRAT diet. Seek care if blood in stool, fever, signs of dehydration (sunken eyes, no urination, dry mouth).
+
+Cholera: Profuse watery diarrhoea (rice-water stools), vomiting, severe dehydration. Medical emergency. IV fluids + Doxycycline. Report to health authorities.
+
+Amoebiasis: Bloody diarrhoea, abdominal cramps. Metronidazole for 7-10 days + Diloxanide furoate to clear cysts.
+
+Irritable Bowel Syndrome (IBS): Chronic abdominal pain, bloating, alternating diarrhoea/constipation. No structural cause. High-fibre diet, stress management, Mebeverine for spasms.
